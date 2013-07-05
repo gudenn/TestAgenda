@@ -25,7 +25,7 @@ public class OperacionesTest {
     
     
         
-       
+      
     @Test
     public void testInsertar() {
         System.out.println("insertar");
@@ -36,19 +36,17 @@ public class OperacionesTest {
         System.out.print(result);
         assertTrue(result);
     }
-
     
     @Test
-    public void testConsultar() {
+    public void testConsultar() throws SQLException {
         
         System.out.println("consultar");
-        String sql = "select count(*) from evento";
+        String sql = "select count(*) from Persona";
         Operaciones instance = new Operaciones();
-        ResultSet expResult = null;
+        String expResult ="11";
         ResultSet result = instance.consultar(sql);
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-        fail("The test case is a prototype.");
+        String  resultado = result.getString(1);
+        assertEquals(expResult, resultado);
         
     }
 
