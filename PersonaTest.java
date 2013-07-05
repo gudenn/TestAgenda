@@ -17,7 +17,9 @@ import static org.junit.Assert.*;
  */
 public class PersonaTest {
     
-    Persona persona = new Persona("01","7845698", "Juan", "Carlos", "Ojeda", "Ricaldi");
+   
+    private Persona persona = new Persona("1","Moises","Ramos Segovia", "14-08-2013","72291585","moi@gmail.com");
+    
     
    @Test 
     public void testSetId()
@@ -26,18 +28,34 @@ public class PersonaTest {
         System.out.print(persona.getId());
     }
     @Test
-    public void testSetPrimer_nombre()
+    public void testSetNombre()
     {
         assertNotNull(null,persona.getnombre());
+        System.out.print(persona.getnombre());
     }
-   /* @Test
-    public void testSetSegundo_nombre()
-    {
-        assertNotNull(null,persona.getSegundo_nombre());
-    }*/
     @Test
-    public void testSetPrimer_apellido()
+    public void testSetApellido()
     {
         assertNotNull(null,persona.getapellido());
+        System.out.print(persona.getapellido());
     }
+    @Test
+    public void testSetCumpleano()
+    {
+        assertNotNull(null,persona.get_cumpleaño());
+        System.out.print(persona.get_cumpleaño());
+    }
+    @Test
+    public void testSetTelefono()
+    {
+        assertNotNull(null,persona.gettelefono());
+        System.out.print(persona.gettelefono());
+    }
+    @Test
+    public void testSetEmail()
+    {
+        assertNotNull(null, persona.getEmail());
+        System.out.print(persona.getEmail());
+    }
+    
 }
